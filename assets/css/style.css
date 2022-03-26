@@ -1,0 +1,383 @@
+/* Variables */
+:root {
+    --principal: #1B4D99;
+    --secondary: #ffffff;
+    --font-primary: Arial, Helvetica, sans-serif;
+    --text-lg: 2em;
+    --text-md: 1.3em;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globals */
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+    color: var(--secondary);
+    background-color: var(--secondary);
+}
+
+/* Helpers */
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Atributos del header */
+header {
+    background-image: linear-gradient(var(--principal), var(--secondary));
+    padding: 1.2rem 0.31rem;
+    height: 15vh;
+    grid-column: 1 / 13;
+    grid-row: 1;
+}
+
+header .navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    flex-basis: 30%;
+}
+
+header .menu {
+    flex-basis: 40%;
+    gap: 1rem;
+}
+
+header .menu__item {
+    font-size: var(--text-md);
+    transition: background-color .3s ease-in-out;
+}
+
+.menu .menu__item:hover {
+    background-color: #ffffff99;
+}
+
+.menu .menu__item .menu__link {
+    font-size: var(--text-md);
+    padding: 1rem;
+}
+
+/* Atributos sobre el main content area */
+main {
+    grid-column: 1 / 13;
+    grid-row: 2;
+}
+
+/* Atributos  de la seccion HOME */
+#photoSlider>ul.slider {
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem auto;
+    max-width: 100em;
+    width: 100%;
+    height: 65em;
+    min-width: 320px;
+    box-shadow: -1rem .5rem 1rem gray;
+}
+
+#photoSlider>ul.slider h2 {
+    position: absolute;
+    background-color: #ffffff99;
+    padding: 1.5rem;
+    align-items: center;
+    left: 50%;
+    top: 10rem;
+    transform: translate(-50%, 400%);
+}
+
+#photoSlider>ul.slider li {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+
+#photoSlider>ul.slider li img {
+    width: 100%;
+    height: 100%;
+    max-width: 100em;
+}
+
+#photoSlider>ul.slider li:first-child {
+    opacity: 1;
+}
+
+#photoSlider>ul.slider li:target {
+    opacity: 1;
+}
+
+#photoSlider>.menuSlide {
+    text-align: center;
+    padding: 1rem;
+}
+
+#photoSlider>.menuSlide li {
+    display: inline-block;
+}
+
+#photoSlider>.menuSlide li a {
+    background-color: darkgrey;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+}
+
+/* Atributos de la seccion ABOUT */
+main .sectionAbout {
+    padding-top: 5rem;
+    width: 100%;
+    min-height: 320px;
+}
+
+main .title {
+    text-transform: lowercase;
+    font-size: 3em;
+    color: var(--principal);
+}
+
+
+main .content>h3 {
+    margin-top: 1rem;
+    font-size: var(--text-lg);
+    color: var(--principal);
+}
+
+
+main .content>p {
+    margin-top: 0.5rem;
+    font-size: var(--text-md);
+    line-height: 1.5;
+    color: var(--principal);
+    text-align: justify;
+    padding-right: 1rem;
+}
+
+.image-section {
+    width: 100%;
+}
+
+/* Atributos de la seccion SERVICE */
+.card {
+    width: 100%;
+    grid-gap: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* NO ME RECONOCE ESTA GRILLA, LO DEJO POR SI EXISTE ALGUNA FORMA DE MODIFICARLO */
+/* .col1row1{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.col2row1{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.col1row2{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.col2row2{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.col1row3{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.col2row3{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.col1row4{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+.col2row4{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+.col1row5{
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+}
+.col2row5{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+} */
+
+main .contentCard>h2 {
+    font-size: var(--text-lg);
+    color: var(--principal);
+    margin-top: 0.5rem;
+}
+
+.contentCard>p {
+    font-size: var(--text-md);
+    color: var(--principal);
+}
+
+/* Atributos del contenido de WORKS */
+main .work {
+    margin-top: 2rem;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+main .work>h2 {
+    font-size: var(--text-md);
+    color: var(--principal);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Atributos de la seccion CONTACT */
+main .contactForm {
+    margin-top: 5rem;
+    padding: 1rem 1rem;
+    background-color: #5c82bd;
+    border: 3px solid black;
+    border-style: double;
+    border-radius: 2rem;
+    align-items: center;
+    box-shadow: -1rem .5rem 1rem gray;
+    justify-content: center;
+}
+
+
+/* Atributos sobre el footer */
+footer {
+    background-image: linear-gradient(var(--secondary), var(--principal));
+    padding: 1.2rem 0.31rem;
+    height: 10vh;
+    grid-column: 1 / 13;
+    grid-row: 3;
+}
+
+footer .footer {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+footer .disclaimer {
+    color: var(--secondary);
+    font-size: var(--text-md);
+    font-weight: bold;
+    text-align: center;
+}
+
+footer .socialMedia {
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.socialMedia__link {
+    width: 4em;
+    height: 4em;
+}
+
+/* Atributos media qery para responsive */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 1em;
+    }
+
+    header .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu {
+        font-size: .8em;
+        font-weight: bold;
+        color: var(--principal);
+    }
+
+    .slider {
+        flex-wrap: wrap;
+    }
+
+    #photoSlider {
+        transform: scale(0.8);
+    }
+
+    .contentAbout {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        transform: scale(0.9);
+        text-align: center;
+    }
+
+    .content {
+        transform: scale(0.9);
+    }
+
+    .image-section {
+        transform: scale(0.8);
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainWork {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer .disclaimer {
+        font-size: 1em;
+    }
+
+    footer .socialMedia {
+        transform: scale(0.8);
+    }
+}
