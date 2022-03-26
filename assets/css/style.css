@@ -29,7 +29,6 @@ a {
 
 html {
     font-size: 62.5%;
-    background-color: var(--secondary);
 }
 
 /* Helpers */
@@ -169,7 +168,6 @@ main .sectionAbout {
 }
 
 main .title {
-    text-transform: lowercase;
     font-size: 3em;
     color: var(--principal);
 }
@@ -195,27 +193,6 @@ main .content>p {
     width: 100%;
 }
 
-/* Atributos de la seccion SERVICE */
-.card {
-    width: 100%;
-    grid-gap: 1rem;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-}
-
-main .contentCard>h2 {
-    font-size: var(--text-lg);
-    color: var(--principal);
-    margin-top: 0.5rem;
-}
-
-.contentCard>p {
-    font-size: var(--text-md);
-    color: var(--principal);
-}
-
 /* Atributos del contenido de WORKS */
 main .work {
     margin-top: 2rem;
@@ -224,7 +201,6 @@ main .work {
 }
 
 main .work>h2 {
-    font-size: var(--text-md);
     color: var(--principal);
     text-align: center;
     padding: 1rem 0;
@@ -311,13 +287,6 @@ footer .socialMedia {
 
     .image-section {
         transform: scale(0.8);
-    }
-
-    .card {
-        display: grid;
-        grid-template-columns: 1fr;
-        flex-direction: column;
-        align-items: center;
     }
 
     .mainWork {
