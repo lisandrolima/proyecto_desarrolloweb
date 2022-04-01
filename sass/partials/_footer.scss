@@ -1,0 +1,56 @@
+/* Atributos sobre el footer */
+footer {
+    background-image: linear-gradient(var(--secondary), var(--principal));
+    padding: 1.2rem 0.31rem;
+    height: 10vh;
+    /* grid-column: 1 / 13;
+    grid-row: 3; */
+
+    .footer {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .disclaimer {
+        color: var(--secondary);
+        font-size: var(--text-md);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .socialMedia {
+        gap: 1rem;
+        justify-content: flex-end;
+
+        &__link {
+            width: 4em;
+            height: 4em;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    footer{
+    
+        .disclaimer {
+            font-size: 1em;
+        }
+    
+        .socialMedia {
+            transform: scale(0.8);
+        }        
+    }
+}
+
+@media screen and (max-width: 480px){
+    footer{
+        .disclaimer {
+            font-size: 1em;
+        }
+    
+        .socialMedia {
+            transform: scale(0.8);
+        }
+    }
+}

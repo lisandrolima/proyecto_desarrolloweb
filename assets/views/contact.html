@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
 
     <title>Lisandro Photo & Video</title>
@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <nav class="navbar flex-row container">
+        <nav class="navbar row container">
             <picture class="logo animate__animated animate__pulse">
                 <a href="../../index.html"><img class="logo__png" src="../image/Logoblancofull.png" alt="caracol"
                         width="450px"></a>
@@ -47,56 +47,61 @@
 
     <!-- El cuerpo de esta seccion va a contener el formulario de contacto con la opcion de elegir el servicio deseado -->
     <main>
-        <div class="contactForm row container w-75 p-3">
-            <h2>
-                ¿Necesitas un presupuesto?
-            </h2>
-            <p>
-                Completa por favor el siguiente formulario para poder ponernos en contacto
-            </p>
-            <!-- Las etiquetas label utilizadas pueden omitirse segun como avance el proyecto -->
-            <form method="post">
-                <label for="nombre_apellido">Nombre y Apellido:</label><br>
-                <input type="text" name="nombre_apellido" id="nombre_apellido"
-                    placeholder="Escribe tu nombre y apellido" required="true"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" name="email" id="email" placeholder="Escribe tu mail" required="true"><br>
-                <label for="telefono">Telefono:</label><br>
-                <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu telefono" required="true"><br>
-            </form>
+        <section class="container my-5">
+            <div class="contactForm row col-sm-8 col-md-6 col-lg-4">
+                <h2>
+                    ¿Necesitas un presupuesto?
+                </h2>
+                <p>
+                    Completa por favor el siguiente formulario para poder ponernos en contacto
+                </p>
+                <!-- Las etiquetas label utilizadas pueden omitirse segun como avance el proyecto -->
+                <form method="post">
+                    <label for="nombre_apellido">Nombre y Apellido:</label><br>
+                    <input type="text" name="nombre_apellido" id="nombre_apellido"
+                        placeholder="Escribe tu nombre y apellido" required="true"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id="email" placeholder="Escribe tu mail" required="true"><br>
+                    <label for="telefono">Telefono:</label><br>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu telefono"
+                        required="true"><br>
+                </form>
 
-            <!-- Lista desplegable de servicios -->
-            <label for="elija_un_servicio">Elija un Servicio:</label>
-            <form action="elija_un_servicio">
-                <select name="servicios" id="">
-                    <option value="foto_producto">Foto Producto</option>
-                    <option value="celebraciones">Celebraciones</option>
-                    <option value="corporativo">Fotos Corporativas</option>
-                    <option value="shows">Shows</option>
-                    <option value="retratos">Retratos</option>
-                </select>
-                <br>
-                <br>
-                <section>
-                    <label for="checkbox">Tiempo estimado de la cobertura del evento / sesión de fotos:</label><br>
-                    <input type="radio" name="seleccionUnica" id="">Hasta 2 horas <br>
-                    <input type="radio" name="seleccionUnica" id="">Hasta 4 horas <br>
-                    <input type="radio" name="seleccionUnica" id="">Hasta 6 horas <br>
-                    <input type="radio" name="seleccionUnica" id="">Hasta 8 horas <br>
-                    <input type="radio" name="seleccionUnica" id="">No se <br>
-                </section>
-                <br>
+                <!-- Lista desplegable de servicios -->
+                <label for="elija_un_servicio">Elija un Servicio:</label>
+                <form action="elija_un_servicio">
+                    <select name="servicios" id="">
+                        <option value="foto_producto">Foto Producto</option>
+                        <option value="celebraciones">Celebraciones</option>
+                        <option value="corporativo">Fotos Corporativas</option>
+                        <option value="shows">Shows</option>
+                        <option value="retratos">Retratos</option>
+                    </select>
+                    <br>
+                    <br>
+                    <section>
+                        <label for="checkbox">Tiempo estimado de la cobertura del evento / sesión de fotos:</label><br>
+                        <input type="radio" name="seleccionUnica" id="">Hasta 2 horas <br>
+                        <input type="radio" name="seleccionUnica" id="">Hasta 4 horas <br>
+                        <input type="radio" name="seleccionUnica" id="">Hasta 6 horas <br>
+                        <input type="radio" name="seleccionUnica" id="">Hasta 8 horas <br>
+                        <input type="radio" name="seleccionUnica" id="">No se <br>
+                    </section>
+                    <br>
 
-            </form>
-            <form action="">
-                <label for="">Por favor describa en detalle toda información adicional relacionada con su
-                    pedido:</label><br>
-                <label for="">(Lugar de trabajo, fecha, horarios, estilo de fotos, Etc.)</label><br>
-                <br><textarea name="comentario" id="comentario" placeholder="ingrese comentario" cols="50"
-                    rows="10"></textarea><br>
-            </form>
-            <br><button type="submit">Enviar</button><br>
-        </div>
+                </form>
+                <form action="">
+                    <label for="">Por favor describa en detalle toda información adicional relacionada con su
+                        pedido:</label><br>
+                    <label for="">(Lugar de trabajo, fecha, horarios, estilo de fotos, Etc.)</label><br>
+                        <textarea class="col-12" name="comentario" id="comentario" placeholder="ingrese comentario" cols="0"
+                        rows="6"></textarea>
+                </form>
+                <div class="d-grid gap-2 d-md-block d-sm-block my-2">
+                    <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Es el mismo en todas las secciones -->

@@ -12,14 +12,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     <title>Lisandro Photo & Video</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar flex-row container">
+        <nav class="navbar row container">
             <picture class="logo animate__animated animate__pulse">
                 <a href="../../index.html"><img class="logo__png" src="../image/Logoblancofull.png" alt="caracol"
                         width="450px"></a>
@@ -46,14 +46,47 @@
 
     <!-- Aqui iran fotos de los diferentes trabajos realizados con una breve descripción -->
     <main>
-        <section class="work row container">
-            <h2 class="fw-bold fs-4">Botanical Garden</h2>
-            <img src="../image/Arboles cerezos en el jardin botanico.jpg" alt="Arboles de cerezos en Nueva York"
-                style="height: 200px;">
-        </section>
-        <section class="work row container">
-            <h2 class="fw-bold fs-4">Travel Blog Channel - Intro</h2>
-            <video src="../video/Intro.mp4" style="height: 200px;" controls></video>
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <article class="card col-sm-12 col-md-6 col-lg-3 mx-2 my-2">
+                    <img class="w-100 p-3" src="../image/Arboles cerezos en el jardin botanico.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body work">
+                        <h5>TITULO DEL TRABAJO REALIZADO</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </article>
+                <article class="card col-sm-12 col-md-6 col-lg-3 mx-2 my-2">
+                    <img src="../image/Cata y Consti.jpg" class="card-img-top" alt="...">
+                    <div class="card-body work">
+                        <h5>TITULO DEL TRABAJO REALIZADO</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </article>
+                <article class="card col-sm-12 col-md-6 col-lg-3 mx-2 my-2">
+                    <img src="../image/IMG_4809.JPG" class="card-img-top" alt="...">
+                    <div class="card-body work">
+                        <h5>TITULO DEL TRABAJO REALIZADO</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </article>
+                <article class="card col-sm-12 col-md-8 col-lg-6 mx-2 my-2">
+                    <video class="w-100 p-3" src="../video/Intro.mp4" class="card-img-top" alt="..." controls>
+                        <div class="card-body work">
+                            <h5>TITULO DEL TRABAJO REALIZADO</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the
+                                card's content.</p>
+                        </div>
+                </article>
+            </div>
         </section>
     </main>
 

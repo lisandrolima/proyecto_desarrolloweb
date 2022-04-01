@@ -47,16 +47,16 @@ html {
 }
 
 body {
-    display: grid;
+    /* display: grid; */
     min-height: 100vh;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto 1fr auto;
+    /* grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto; */
     color: var(--secondary);
     font-family: var(--font-primary);
 }
 
-/* Atributos del header */
-header {
+/* Atributos del header - YA MIGRADO */
+/* header {
     background-image: linear-gradient(var(--principal), var(--secondary));
     padding: 1.2rem 0.31rem;
     height: 15vh;
@@ -90,13 +90,13 @@ header .menu__item {
 .menu .menu__item .menu__link {
     font-size: var(--text-md);
     padding: 1rem;
-}
+} */
 
 /* Atributos sobre el main content area */
-main {
+/* main {
     grid-column: 1 / 13;
     grid-row: 2;
-}
+} */
 
 /* Atributos  de la seccion HOME */
 #photoSlider>ul.slider {
@@ -194,22 +194,20 @@ main .content>p {
 }
 
 /* Atributos del contenido de WORKS */
-main .work {
-    margin-top: 2rem;
-    justify-content: space-between;
-    padding: 2rem;
+.work>h5 {
+    color: var(--principal);
+    font-size: var(--text-lg);
 }
 
-main .work>h2 {
+.work>p {
     color: var(--principal);
-    text-align: center;
-    padding: 1rem 0;
+    font-size: var(--text-md);
 }
 
 /* Atributos de la seccion CONTACT */
 main .contactForm {
-    margin: 6rem auto;
-    padding: 2rem 2rem;
+    font-size: var(--text-md);
+    margin: 0 auto;
     background-color: #5c82bd;
     border: 3px solid black;
     border-style: double;
@@ -217,9 +215,23 @@ main .contactForm {
     box-shadow: -1rem .5rem 1rem gray;
 }
 
+form input{
+    outline: none;
+}
+
+form textarea{
+    outline: none;
+}
+
+.btn{
+    background-color: var(--secondary);
+    color: black;
+    font-size: 1em;
+    border-radius: 1rem;
+}
 
 /* Atributos sobre el footer */
-footer {
+/* footer {
     background-image: linear-gradient(var(--secondary), var(--principal));
     padding: 1.2rem 0.31rem;
     height: 10vh;
@@ -248,11 +260,11 @@ footer .socialMedia {
 .socialMedia__link {
     width: 4em;
     height: 4em;
-}
+} */
 
 /* Atributos media qery para responsive */
-@media screen and (max-width: 480px) {
-    header {
+@media screen and (max-width: 576px) {
+    /* header {
         padding: 1em;
     }
 
@@ -265,7 +277,7 @@ footer .socialMedia {
         font-size: .8em;
         font-weight: bold;
         color: var(--principal);
-    }
+    } */
 
     #photoSlider {
     transform: scale(0.8);
@@ -294,11 +306,63 @@ footer .socialMedia {
         flex-direction: column;
     }
 
-    .footer .disclaimer {
+    /* .footer .disclaimer {
         font-size: 1em;
     }
 
     footer .socialMedia {
         transform: scale(0.8);
+    } */
+}
+
+@media screen and (max-width: 480px) {
+    /* header {
+        padding: 1em;
     }
+
+    header .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu {
+        font-size: .8em;
+        font-weight: bold;
+        color: var(--principal);
+    } */
+
+    #photoSlider {
+    transform: scale(0.8);
+    }
+
+    .contentAbout {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        transform: scale(0.9);
+        text-align: center;
+    }
+
+    .content {
+        transform: scale(0.9);
+    }
+
+    .image-section {
+        transform: scale(0.8);
+    }
+
+    .mainWork {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* .footer .disclaimer {
+        font-size: 1em;
+    }
+
+    footer .socialMedia {
+        transform: scale(0.8);
+    } */
 }
