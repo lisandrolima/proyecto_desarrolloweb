@@ -1,10 +1,8 @@
 /* Atributos sobre el footer */
 footer {
-    background-image: linear-gradient(var(--secondary), var(--principal));
+    background-image: linear-gradient($secondary, $principal);
     padding: 1.2rem 0.31rem;
     height: 10vh;
-    /* grid-column: 1 / 13;
-    grid-row: 3; */
 
     .footer {
         justify-content: space-between;
@@ -13,8 +11,8 @@ footer {
     }
 
     .disclaimer {
-        color: var(--secondary);
-        font-size: var(--text-md);
+        color: $secondary;
+        font-size: $text-md;
         font-weight: bold;
         text-align: center;
     }

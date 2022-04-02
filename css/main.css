@@ -1,0 +1,173 @@
+/* Variables */
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* GLOBALS */
+html {
+  font-size: 62.5%; }
+
+body {
+  /* display: grid; */
+  min-height: 100vh;
+  /* grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto; */
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  /* you usaria un <header>, un <main> y footer,
+    ponerle al header y footer posicionamiento 
+    STICKEY para header y footer y el main en un 100vh*/ }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; }
+
+/* Helpers */
+.flex-row {
+  display: flex; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto; }
+
+header {
+  background-color: linear-gradient(#1B4D99, #ffffff);
+  background-image: linear-gradient(#1B4D99, #ffffff);
+  padding: 1.2rem 0.31rem;
+  height: 15vh; }
+  header .navbar {
+    justify-content: space-between;
+    align-items: center; }
+    header .navbar .logo {
+      flex-basis: 30%; }
+    header .navbar .menu {
+      flex-basis: 40%;
+      gap: 1rem; }
+      header .navbar .menu__item {
+        font-size: 1.3em;
+        transition: background-color .3s ease-in-out; }
+        header .navbar .menu__item:hover {
+          background-color: #ffffff99; }
+      header .navbar .menu__link {
+        font-size: 1.3em;
+        padding: 1rem; }
+
+@media screen and (max-width: 576px) {
+  header {
+    padding: 1em; }
+    header .navbar {
+      flex-wrap: wrap;
+      justify-content: center; }
+    header .menu {
+      font-size: .8em;
+      font-weight: bold;
+      color: #1B4D99; } }
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1em; }
+    header .navbar {
+      flex-wrap: wrap;
+      justify-content: center; }
+    header .menu {
+      font-size: .8em;
+      font-weight: bold;
+      color: #1B4D99; } }
+
+#photoSlider .slider {
+  position: relative;
+  margin: 2rem auto;
+  padding: 2rem auto;
+  max-width: 100em;
+  width: 100%;
+  height: 65em;
+  min-width: 320px;
+  box-shadow: -1rem .5rem 1rem gray; }
+  #photoSlider .slider h2 {
+    position: absolute;
+    background-color: #ffffff99;
+    padding: 1.5rem;
+    align-items: center;
+    left: 50%;
+    top: 10rem;
+    transform: translate(-50%, 400%); }
+  #photoSlider .slider li {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s; }
+    #photoSlider .slider li img {
+      width: 100%;
+      height: 100%;
+      max-width: 100em; }
+    #photoSlider .slider li li:first-child {
+      opacity: 1; }
+    #photoSlider .slider li li:target {
+      opacity: 1; }
+
+#photoSlider .menuSlide {
+  text-align: center;
+  padding: 1rem; }
+  #photoSlider .menuSlide #photoSlider > .menuSlide li {
+    display: inline-block; }
+    #photoSlider .menuSlide #photoSlider > .menuSlide li a {
+      background-color: darkgrey;
+      width: 2em;
+      height: 2em;
+      border-radius: 100%; }
+
+@media screen and (max-width: 576px) {
+  #photoSlider {
+    transform: scale(0.8); } }
+
+@media screen and (max-width: 480px) {
+  #photoSlider {
+    transform: scale(0.8); } }
+
+/* Atributos sobre el footer */
+footer {
+  background-image: linear-gradient(#ffffff, #1B4D99);
+  padding: 1.2rem 0.31rem;
+  height: 10vh; }
+  footer .footer {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; }
+  footer .disclaimer {
+    color: #ffffff;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center; }
+  footer .socialMedia {
+    gap: 1rem;
+    justify-content: flex-end; }
+    footer .socialMedia__link {
+      width: 4em;
+      height: 4em; }
+
+@media screen and (max-width: 576px) {
+  footer .disclaimer {
+    font-size: 1em; }
+  footer .socialMedia {
+    transform: scale(0.8); } }
+
+@media screen and (max-width: 480px) {
+  footer .disclaimer {
+    font-size: 1em; }
+  footer .socialMedia {
+    transform: scale(0.8); } }

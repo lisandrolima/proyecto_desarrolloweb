@@ -1,0 +1,35 @@
+/* RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBALS */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* display: grid; */
+    min-height: 100vh;
+    /* grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto; */
+    color: $secondary;
+    font-family: $font-primary;
+    /* you usaria un <header>, un <main> y footer,
+    ponerle al header y footer posicionamiento 
+    STICKEY para header y footer y el main en un 100vh*/
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
