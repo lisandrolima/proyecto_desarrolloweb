@@ -164,7 +164,7 @@ header .menu__item {
 } */
 
 /* Atributos de la seccion ABOUT */
-main .sectionAbout {
+/* main .sectionAbout {
     padding-top: 5rem;
     width: 100%;
     min-height: 320px;
@@ -194,10 +194,10 @@ main .content>p {
 
 .image-section {
     width: 100%;
-}
+} */
 
 /* Atributos del contenido de WORKS */
-.work>h5 {
+/* .work>h5 {
     color: var(--principal);
     font-size: var(--text-lg);
 }
@@ -205,10 +205,10 @@ main .content>p {
 .work>p {
     color: var(--principal);
     font-size: var(--text-md);
-}
+} */
 
 /* Atributos de la seccion CONTACT */
-main .contactForm {
+/* main .contactForm {
     font-size: var(--text-md);
     margin: 0 auto;
     background-color: #5c82bd;
@@ -231,7 +231,7 @@ form textarea{
     color: black;
     font-size: 1em;
     border-radius: 1rem;
-}
+} */
 
 /* Atributos sobre el footer */
 /* footer {
@@ -286,7 +286,7 @@ footer .socialMedia {
     transform: scale(0.8);
     } */
 
-    .contentAbout {
+    /* .contentAbout {
         flex-direction: column;
         justify-content: center;
     }
@@ -302,7 +302,7 @@ footer .socialMedia {
 
     .image-section {
         transform: scale(0.8);
-    }
+    } */
 
     .mainWork {
         align-items: center;
@@ -338,7 +338,7 @@ footer .socialMedia {
     transform: scale(0.8);
     } */
 
-    .contentAbout {
+    /* .contentAbout {
         flex-direction: column;
         justify-content: center;
     }
@@ -354,7 +354,7 @@ footer .socialMedia {
 
     .image-section {
         transform: scale(0.8);
-    }
+    } */
 
     .mainWork {
         align-items: center;

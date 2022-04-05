@@ -1,0 +1,73 @@
+/* Atributos de la seccion ABOUT */
+.sectionAbout {
+    margin: 5rem auto;
+    width: 100%;
+    min-height: 320px;
+
+
+    .title {
+        font-size: 3em;
+        color: $principal;
+    }
+
+
+    .content>h3 {
+        margin-top: 1rem;
+        font-size: $text-lg;
+        color: $principal;
+    }
+
+
+    .content>p {
+        margin-top: 0.5rem;
+        font-size: $text-md;
+        line-height: 1.5;
+        color: $principal;
+        text-align: justify;
+        padding-right: 1rem;
+    }
+
+    .image-section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .contentAbout {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        transform: scale(0.9);
+        text-align: center;
+    }
+
+    .content {
+        transform: scale(0.9);
+    }
+
+    .image-section {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .contentAbout {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        transform: scale(0.9);
+        text-align: center;
+    }
+
+    .content {
+        transform: scale(0.9);
+    }
+
+    .image-section {
+        transform: scale(0.8);
+    }
+}

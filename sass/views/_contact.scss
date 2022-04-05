@@ -1,0 +1,26 @@
+/* Atributos de la seccion CONTACT */
+.contactForm {
+    font-size: $text-md;
+    margin: 0 auto;
+    background-color: #5c82bd;
+    border: 3px solid black;
+    border-style: double;
+    border-radius: 2rem;
+    box-shadow: -1rem .5rem 1rem gray;
+
+
+    form input{
+        outline: none;
+    }
+
+    form textarea{
+        outline: none;
+    }
+
+    .btn{
+        background-color: $secondary;
+        color: black;
+        font-size: 1em;
+        border-radius: 1rem;
+    }
+}

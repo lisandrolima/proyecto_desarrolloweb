@@ -33,15 +33,15 @@
                 height: 100%;
                 max-width: 100em;
             }
-        
-            li:first-child {
-                opacity: 1;
-            }
-        
-            li:target {
-                opacity: 1;
-            }
+        }        
+        li:first-child {
+            opacity: 1;
         }
+        
+        li:target {
+            opacity: 1;
+        }
+
     }
 
     .menuSlide {
@@ -49,7 +49,7 @@
         padding: 1rem;
     
 
-        #photoSlider>.menuSlide li {
+        li {
             display: inline-block;
         
             a {
