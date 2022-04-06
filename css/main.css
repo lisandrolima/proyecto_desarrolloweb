@@ -12,15 +12,9 @@ html {
   font-size: 62.5%; }
 
 body {
-  /* display: grid; */
   min-height: 100vh;
-  /* grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto 1fr auto; */
   color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  /* you usaria un <header>, un <main> y footer,
-    ponerle al header y footer posicionamiento 
-    STICKEY para header y footer y el main en un 100vh*/ }
+  font-family: Arial, Helvetica, sans-serif; }
 
 ul {
   list-style-type: none; }
@@ -194,6 +188,11 @@ header {
   color: #1B4D99;
   font-size: 1.3em; }
 
+.service {
+  margin: 5rem auto;
+  width: 100%;
+  min-height: 320px; }
+
 /* Atributos de la seccion CONTACT */
 .contactForm {
   font-size: 1.3em;
@@ -217,7 +216,7 @@ header {
 footer {
   background-image: linear-gradient(#ffffff, #1B4D99);
   padding: 1.2rem 0.31rem;
-  height: 10vh; }
+  height: 15vh; }
   footer .footer {
     justify-content: space-between;
     align-items: center;
