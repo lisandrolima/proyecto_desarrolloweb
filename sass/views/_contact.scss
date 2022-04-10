@@ -24,3 +24,15 @@
         border-radius: 1rem;
     }
 }
+
+@media screen and (max-width: 576px){
+    .contactForm {
+        transform: scale(0.8);
+    }    
+}
+
+@media screen and (max-width: 480px){
+    .contactForm {
+        transform: scale(0.8);
+    }    
+}

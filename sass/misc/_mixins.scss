@@ -1,6 +1,13 @@
 /* Helpers */
-.flex-row {
+
+/* Uso de mixin aplicado en los 5 header y footer*/
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start, $gap: 0, $wrap: wrap) {
     display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-wrap: $wrap;
 }
 
 .flex-column {
