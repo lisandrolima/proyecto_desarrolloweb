@@ -2,73 +2,101 @@
 .sectionAbout {
     margin: 5rem auto;
     width: 100%;
-    min-height: 320px;
+    min-height: 100vh;
 
+    .content-section{
+        float: left;
+        width: 55%;
+    
+        .title {
+            font-size: 3em;
+            color: $principal;
+        }
 
-    .title {
-        font-size: 3em;
-        color: $principal;
-    }
-
-
-    .content>h3 {
-        margin-top: 1rem;
-        font-size: $text-lg;
-        color: $principal;
-    }
-
-
-    .content>p {
-        margin-top: 0.5rem;
-        font-size: $text-md;
-        line-height: 1.5;
-        color: $principal;
-        text-align: justify;
-        padding-right: 1rem;
+        .content>h3 {
+            margin-top: 1rem;
+            font-size: $text-lg;
+            color: $principal;
+        }
+    
+        .content>p {
+            margin-top: 0.5rem;
+            font-size: $text-md;
+            line-height: 1.5;
+            color: $principal;
+            text-align: justify;
+            padding-right: 1rem;
+        }
     }
 
     .image-section {
-        width: 100%;
+        float: right;
+        width: 40%;
+    }
+
+    .image-section img{
+        width: 80%;
+        height: auto;
+        box-shadow: -1rem .5rem 1rem gray;
     }
 }
 
 @media screen and (max-width: 576px){
-    .contentAbout {
+    .sectionAbout {
         flex-direction: column;
         justify-content: center;
-    }
+        min-height: auto;
+    
+        .content-section{
+            float: none;
+            width: 80%;
+            display: block;
+            margin: auto;
 
-    .title {
-        transform: scale(0.9);
-        text-align: center;
-    }
+            .title {
+                text-align: center;
+            }
+        
+            .content {
+                text-align: justify;
+            }
+        }
 
-    .content {
-        transform: scale(0.9);
-    }
-
-    .image-section {
-        transform: scale(0.8);
-        align-items: center;
+        .image-section {
+            float: none;
+            width: 70%;
+            display: block;
+            margin: auto;
+        }
     }
 }
 
 @media screen and (max-width: 480px){
-    .contentAbout {
+    .sectionAbout {
         flex-direction: column;
         justify-content: center;
-    }
+        min-height: auto;
+    
+        .content-section{
+            float: none;
+            width: 60%;
+            display: block;
+            margin: auto;
+        
+            .title {
+                text-align: center;
+            }
 
-    .title {
-        transform: scale(0.9);
-        text-align: center;
-    }
+            .content {
+                text-align: justify;
+            }
+        }
 
-    .content {
-        transform: scale(0.9);
-    }
-
-    .image-section {
-        transform: scale(0.8);
+        .image-section {
+            float: none;
+            width: 60%;
+            display: block;
+            margin: auto;
+        }
     }
 }
