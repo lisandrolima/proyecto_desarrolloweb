@@ -16,14 +16,17 @@ body {
     min-height: 100vh;
     color: $secondary;
     font-family: $font-primary;
+    // background-color: #FAFDD6;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 ul {
-    list-style-type: none;
+     list-style-type: none;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-}
+// a {
+//     text-decoration: none;
+//     color: $secondary;
+//     display: inline-block;
+// }

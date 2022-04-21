@@ -1,9 +1,10 @@
 /* Atributos sobre el footer */
 footer {
-    background-image: linear-gradient($secondary, $principal);
+    // background-image: linear-gradient($secondary, $principal);
+    background-color: #789395;
     padding: 1.2rem 0.31rem;
-    height: 15vh;
-
+    min-height: 10vh;
+    
     .footer {
         justify-content: space-between;
         align-items: center;

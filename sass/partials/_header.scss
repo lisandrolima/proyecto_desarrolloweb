@@ -1,28 +1,22 @@
 header {
-    background-image: linear-gradient($principal, $secondary);
-    padding: 1.2rem 0.31rem;
-    height: 15vh;
+    background-color: #525E75;
+    box-shadow: -1rem 0 1rem gray;
 
     .navbar {
         justify-content: space-between;
         align-items: center;
-        @include flex(row, space-between, center, 1rem, wrap);
+        min-height: 10vh;
+        padding: 0 2rem;
 
-        .logo {
-            flex-basis: 30%;
-        }
+        &-nav {
+            @include flex(row=0, space-around, center, 1rem, nowrap);
 
-        .menu {
-            flex-basis: 40%;
-            @include flex(row, space-around, center, 1rem, nowrap);
-
-            &__item {
-                font-size: $text-md;
+            .nav-item {
+                font-size: $text-lg;
+                color: $secondary;
                 transition: background-color .3s ease-in-out;
 
-                /* Uso de extend */
-                &--active {
-                    @extend .menu__item;
+                .active {
                     border-bottom: 2px solid $secondary;
                 }
 
@@ -30,47 +24,6 @@ header {
                     background-color: #ffffff99;
                 }
             }
-
-            &__link {
-                font-size: $text-md;
-                padding: 1rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 576px) {
-    header {
-        padding: 1em;
-
-        .navbar {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .menu {
-            font-size: .8em;
-            font-weight: bold;
-            color: $principal;
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header {
-        padding: 1em;
-
-        .navbar {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .menu {
-            font-size: .8em;
-            font-weight: bold;
-            color: $principal;
-            display: none;
         }
     }
 }
