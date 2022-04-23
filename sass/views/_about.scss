@@ -1,101 +1,103 @@
 /* Atributos de la seccion ABOUT */
-.sectionAbout {
-    margin: 5rem auto;
-    width: 100%;
-    min-height: 100vh;
+// .sectionAbout {
+//     margin: 5rem auto;
+//     width: 100%;
+//     min-height: 100vh;
+//     border: 2px solid #8d4428;
+//     display: inline-block;
 
-    .content-section{
-        float: left;
-        width: 55%;
+//     .content-section{
+//         float: left;
+//         width: 55%;
     
-        .title {
-            font-size: 3em;
-            color: $principal;
-        }
+//         .title {
+//             font-size: 3em;
+//             color: $principal;
+//         }
 
-        .content>h3 {
-            margin-top: 1rem;
-            font-size: $text-lg;
-            color: $principal;
-        }
+//         .content>h3 {
+//             margin-top: 1rem;
+//             font-size: $text-lg;
+//             color: $principal;
+//         }
     
-        .content>p {
-            margin-top: 0.5rem;
-            font-size: $text-md;
-            line-height: 1.5;
-            color: $principal;
-            text-align: justify;
-            padding-right: 1rem;
-        }
-    }
+//         .content>p {
+//             margin-top: 0.5rem;
+//             font-size: $text-md;
+//             line-height: 1.5;
+//             color: $principal;
+//             text-align: justify;
+//             padding-right: 1rem;
+//         }
+//     }
 
-    .image-section {
-        float: right;
-        width: 40%;
-    }
+//     .image-section {
+//         float: right;
+//         width: 40%;
+//     }
 
-    .image-section img{
-        width: 80%;
-        height: auto;
-        box-shadow: -1rem .5rem 1rem gray;
-    }
-}
+//     .image-section img{
+//         width: 80%;
+//         height: auto;
+//         box-shadow: -1rem .5rem 1rem gray;
+//     }
+// }
 
-@media screen and (max-width: 576px){
-    .sectionAbout {
-        flex-direction: column;
-        justify-content: center;
-        min-height: auto;
+// @media screen and (max-width: 576px){
+//     .sectionAbout {
+//         flex-direction: column;
+//         justify-content: center;
+//         min-height: auto;
     
-        .content-section{
-            float: none;
-            width: 80%;
-            display: block;
-            margin: auto;
+//         .content-section{
+//             float: none;
+//             width: 80%;
+//             display: block;
+//             margin: auto;
 
-            .title {
-                text-align: center;
-            }
+//             .title {
+//                 text-align: center;
+//             }
         
-            .content {
-                text-align: justify;
-            }
-        }
+//             .content {
+//                 text-align: justify;
+//             }
+//         }
 
-        .image-section {
-            float: none;
-            width: 70%;
-            margin: auto;
-        }
-    }
-}
+//         .image-section {
+//             float: none;
+//             width: 70%;
+//             margin: auto;
+//         }
+//     }
+// }
 
-@media screen and (max-width: 480px){
-    .sectionAbout {
-        flex-direction: column;
-        justify-content: center;
-        min-height: auto;
+// @media screen and (max-width: 480px){
+//     .sectionAbout {
+//         flex-direction: column;
+//         justify-content: center;
+//         min-height: auto;
     
-        .content-section{
-            float: none;
-            width: 60%;
-            display: block;
-            margin: auto;
+//         .content-section{
+//             float: none;
+//             width: 60%;
+//             display: block;
+//             margin: auto;
         
-            .title {
-                text-align: center;
-            }
+//             .title {
+//                 text-align: center;
+//             }
 
-            .content {
-                text-align: justify;
-            }
-        }
+//             .content {
+//                 text-align: justify;
+//             }
+//         }
 
-        .image-section {
-            float: none;
-            width: 60%;
-            display: block;
-            margin: auto;
-        }
-    }
-}
+//         .image-section {
+//             float: none;
+//             width: 60%;
+//             display: block;
+//             margin: auto;
+//         }
+//     }
+// }

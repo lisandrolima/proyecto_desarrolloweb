@@ -84,83 +84,107 @@ header {
     display: block;
     width: 100%; } }
 
+.containerBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  padding: 0 2rem; }
+
+.card-container {
+  display: flex;
+  width: 80rem;
+  height: auto;
+  font-size: 1.6em;
+  color: #000;
+  background: #C3DBD9;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2); }
+
+.headerCard {
+  border-right: 1px solid #ddd; }
+
+.descriptionCard {
+  background: #C3DBD9; }
+
+.headerCard, .descriptionCard {
+  padding: 2rem;
+  text-align: center; }
+
+.headerCard a {
+  position: relative;
+  display: block; }
+
+.headerCard img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.06);
+  margin: 2rem 3rem;
+  transition: .2s; }
+
+.headerCard a:hover img {
+  box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.01); }
+
+.headerCard h2 {
+  color: #000; }
+
+.headerCard h4 {
+  margin-bottom: 2rem; }
+
+.descriptionCard {
+  position: relative; }
+
+.descriptionCard p {
+  margin: 2rem 3rem; }
+
+@media (max-width: 480px) {
+  .containerBox {
+    height: 60vh; }
+  .card-container {
+    display: block;
+    width: 45rem;
+    font-size: 1.3em;
+    transform: scale(0.8); }
+  .headerCard {
+    padding: 2rem 2rem .5rem 2rem; }
+  .descriptionCard {
+    padding: 0.5rem 2rem 2rem 2rem;
+    background: transparent; }
+  .headerCard h4 {
+    margin: 0; } }
+
 /* Atributos de la seccion ABOUT */
-.sectionAbout {
-  margin: 5rem auto;
+.heading span {
+  display: block; }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem -1rem; }
+
+.gallery-item {
+  flex: 1 0 24rem;
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  overflow: hidden; }
+
+.gallery-image {
+  display: block;
   width: 100%;
-  min-height: 100vh; }
-  .sectionAbout .content-section {
-    float: left;
-    width: 55%; }
-    .sectionAbout .content-section .title {
-      font-size: 3em;
-      color: #1B4D99; }
-    .sectionAbout .content-section .content > h3 {
-      margin-top: 1rem;
-      font-size: 1.6em;
-      color: #1B4D99; }
-    .sectionAbout .content-section .content > p {
-      margin-top: 0.5rem;
-      font-size: 1.3em;
-      line-height: 1.5;
-      color: #1B4D99;
-      text-align: justify;
-      padding-right: 1rem; }
-  .sectionAbout .image-section {
-    float: right;
-    width: 40%; }
-  .sectionAbout .image-section img {
-    width: 80%;
-    height: auto;
-    box-shadow: -1rem .5rem 1rem gray; }
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out; }
 
-@media screen and (max-width: 576px) {
-  .sectionAbout {
-    flex-direction: column;
-    justify-content: center;
-    min-height: auto; }
-    .sectionAbout .content-section {
-      float: none;
-      width: 80%;
-      display: block;
-      margin: auto; }
-      .sectionAbout .content-section .title {
-        text-align: center; }
-      .sectionAbout .content-section .content {
-        text-align: justify; }
-    .sectionAbout .image-section {
-      float: none;
-      width: 70%;
-      margin: auto; } }
+.gallery-image:hover {
+  transform: scale(1.15); }
 
-@media screen and (max-width: 480px) {
-  .sectionAbout {
-    flex-direction: column;
-    justify-content: center;
-    min-height: auto; }
-    .sectionAbout .content-section {
-      float: none;
-      width: 60%;
-      display: block;
-      margin: auto; }
-      .sectionAbout .content-section .title {
-        text-align: center; }
-      .sectionAbout .content-section .content {
-        text-align: justify; }
-    .sectionAbout .image-section {
-      float: none;
-      width: 60%;
-      display: block;
-      margin: auto; } }
-
-/* Atributos del contenido de WORKS */
-.work h5 {
-  color: #1B4D99;
-  font-size: 1.6em; }
-
-.work p {
-  color: #1B4D99;
-  font-size: 1.3em; }
+@supports (display: grid) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-gap: 2rem; }
+  .gallery,
+  .gallery-item {
+    margin: 0; } }
 
 .service {
   margin: 5rem auto;
@@ -172,6 +196,7 @@ header {
 /* Atributos de la seccion CONTACT */
 .contactForm {
   font-size: 1.3em;
+  color: black;
   margin: 0 auto;
   background-color: #C3DBD9;
   border: 3px solid black;
@@ -186,7 +211,8 @@ header {
     background-color: #ffffff;
     color: black;
     font-size: 1em;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    border-color: black; }
 
 @media screen and (max-width: 576px) {
   .contactForm {

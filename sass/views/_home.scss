@@ -1,15 +1,106 @@
 .col-container {
     display: table;
     width: 100%;
-  }
-  .col {
+}
+.col {
     display: table-cell;
     padding: 16px;
-  }
+}
   
-  @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .col { 
       display: block;
       width: 100%;
     }
-  }
+}
+
+.containerBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 0 2rem;
+}
+
+.card-container{
+    display: flex;
+    width: 80rem;
+    height: auto;
+    font-size: $text-lg;
+    color: #000;
+    background: #C3DBD9;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 2px rgba(0,0,0, .2);
+}
+
+.headerCard{
+    border-right: 1px solid #ddd;
+}
+
+.descriptionCard{
+    background: #C3DBD9;
+}
+
+.headerCard, .descriptionCard{
+    padding: 2rem;
+    text-align: center;
+}
+
+.headerCard a{
+    position: relative;
+    display: block;
+}
+
+.headerCard img{
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0,0,0, .06);
+    margin: 2rem 3rem;
+    transition: .2s;
+}
+
+.headerCard a:hover img{
+    box-shadow: 0 0 0 12px rgba(0,0,0, .01);
+}
+
+.headerCard h2{
+    color: #000;
+}
+
+.headerCard h4{
+    margin-bottom: 2rem;
+}
+
+.descriptionCard{
+    position: relative;
+}
+
+.descriptionCard p{
+    margin: 2rem 3rem;
+}
+
+@media (max-width: 480px){
+    .containerBox{
+        height: 60vh;
+    }
+
+    .card-container{
+        display: block;
+        width: 45rem;
+        font-size: $text-md;
+        transform: scale(0.8);
+    }
+
+    .headerCard{
+        padding: 2rem 2rem .5rem 2rem;
+    }
+
+    .descriptionCard{
+        padding: 0.5rem 2rem 2rem 2rem;
+        background: transparent;
+    }
+
+    .headerCard h4{
+        margin: 0;
+    }
+
+}
