@@ -1,3 +1,4 @@
+/* Tarjetas de Recursos */
 .containerCard{
     width: 100%;
     display: flex;
@@ -33,15 +34,88 @@
             p{
                 color: #000;
                 line-height: 1.5;
+                font-size: $text-md;
             }
         }
+    }
+}
+
+/* Tarjeta personal */
+.cardAbout{
+    width: 60rem;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    background-color: #C3DBD9;
+    box-shadow: 0 .5rem 1rem gray;
+    border-radius: 1rem;
+    
+    &:hover{
+        transform: scale(1.02);
+    }
+
+    .image-section{
+        width: 40%;
+        height: 100%;
+        padding: 2rem;
+        
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 100%;
+            box-shadow: 0 0 0 8px rgba(0,0,0, .08);
+            transition: .2s;
+        
+            &:hover{
+                box-shadow: 0 0 0 12px rgba(0,0,0, .02);
+            }
+        }
+    }
+
+    .content-section{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        color: #000;
+        text-align: center;
+        border-left: 1px solid #ddd;
+        position: relative;
+        
+        .title h1{
+            font-size: $text-lg;
+        }
+
+        .content {
+            h3{
+                font-size: $text-md;
+            }
+            
+            p{
+                margin-top: 1rem;
+                font-size: $text-md;
+                line-height: 1.5;
+            }
+        }
+    }
+}  
+
+/* Media query Tarjetas de Recursos*/
+@media screen and (max-width: 640px) {
+    .containerCard{
+        display: flex;
+        flex-flow: row wrap;
+        transform: scale(0.8);
+        margin: 0;
+        padding: 0;
     }
 }
 
 @media screen and (max-width: 480px) {
     .containerCard{
         display: flex;
-        flex-flow: wrap;
+        flex-flow: row wrap;
         transform: scale(1);
     }
 }
@@ -49,7 +123,52 @@
 @media screen and (max-width: 320px) {
     .containerCard{
         display: flex;
-        flex-flow: wrap;
+        flex-flow: row wrap;
         transform: scale(1);
+        transition: 0.1s;
+    }
+}
+
+/* Media query Tarjeta personal */
+@media screen and (max-width: 640px) {
+    .cardAbout{
+        width: 100%;
+        flex-flow: column wrap;
+
+        .image-section{
+            width: 100%;
+        }
+
+        .content-section{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .cardAbout{
+        width: 100%;
+        flex-flow: column wrap;
+    
+        .image-section{
+            width: 100%;
+        }
+
+        .content-section{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .cardAbout{
+        width: 100%;
+        flex-flow: column wrap;
+    
+        .image-section{
+            width: 100%;
+        }
+
+        .content-section{
+            width: 100%;
+        }
     }
 }

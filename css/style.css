@@ -32,8 +32,7 @@ body {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  border: 2px solid red; }
+  grid-template-rows: auto 1fr auto; }
 
 ul {
   list-style-type: none; }
@@ -72,6 +71,7 @@ header {
         header .navbar-nav .nav-item:hover {
           background-color: #ffffff99; }
 
+/* Tarjetas de Recursos */
 .containerCard {
   width: 100%;
   display: flex;
@@ -100,125 +100,118 @@ header {
         margin-bottom: 1.5rem; }
       .containerCard .card .content p {
         color: #000;
-        line-height: 1.5; }
+        line-height: 1.5;
+        font-size: 1.3em; }
+
+/* Tarjeta personal */
+.cardAbout {
+  width: 60rem;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  background-color: #C3DBD9;
+  box-shadow: 0 .5rem 1rem gray;
+  border-radius: 1rem; }
+  .cardAbout:hover {
+    transform: scale(1.02); }
+  .cardAbout .image-section {
+    width: 40%;
+    height: 100%;
+    padding: 2rem; }
+    .cardAbout .image-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 100%;
+      box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.08);
+      transition: .2s; }
+      .cardAbout .image-section img:hover {
+        box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.02); }
+  .cardAbout .content-section {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    color: #000;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    position: relative; }
+    .cardAbout .content-section .title h1 {
+      font-size: 1.6em; }
+    .cardAbout .content-section .content h3 {
+      font-size: 1.3em; }
+    .cardAbout .content-section .content p {
+      margin-top: 1rem;
+      font-size: 1.3em;
+      line-height: 1.5; }
+
+/* Media query Tarjetas de Recursos*/
+@media screen and (max-width: 640px) {
+  .containerCard {
+    display: flex;
+    flex-flow: row wrap;
+    transform: scale(0.8);
+    margin: 0;
+    padding: 0; } }
 
 @media screen and (max-width: 480px) {
   .containerCard {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     transform: scale(1); } }
 
 @media screen and (max-width: 320px) {
   .containerCard {
     display: flex;
-    flex-flow: wrap;
-    transform: scale(1); } }
+    flex-flow: row wrap;
+    transform: scale(1);
+    transition: 0.1s; } }
 
-/* Atributos de la seccion ABOUT */
-.containerBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 45vh;
-  padding: 0 2rem; }
+/* Media query Tarjeta personal */
+@media screen and (max-width: 640px) {
+  .cardAbout {
+    width: 100%;
+    flex-flow: column wrap; }
+    .cardAbout .image-section {
+      width: 100%; }
+    .cardAbout .content-section {
+      width: 100%; } }
 
-.cardContainer {
-  display: flex;
-  width: 80rem;
-  height: auto;
-  font-size: 1.6em;
-  color: #000;
-  background: #C3DBD9;
-  border-radius: 2px;
-  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2); }
-
-.headerCard {
-  border-right: 1px solid #ddd; }
-
-.descriptionCard {
-  background: #C3DBD9; }
-
-.headerCard, .descriptionCard {
-  padding: 2rem;
-  text-align: center; }
-
-.headerCard a {
-  position: relative;
-  display: block; }
-
-.headerCard img {
-  border-radius: 50%;
-  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.06);
-  margin: 2rem 3rem;
-  transition: .2s; }
-
-.headerCard a:hover img {
-  box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.01); }
-
-.headerCard h2 {
-  color: #000; }
-
-.headerCard h4 {
-  margin-bottom: 2rem; }
-
-.descriptionCard {
-  position: relative; }
-
-.descriptionCard p {
-  margin: 2rem 3rem; }
-
-@media (max-width: 480px) {
-  .containerBox {
-    display: flex;
-    flex-flow: wrap;
-    transform: scale(0.8); }
-  .card-container {
-    display: block;
-    width: 50rem; }
-  .headerCard {
-    padding: 2rem 2rem .5rem 2rem; }
-  .descriptionCard {
-    padding: 0.5rem 2rem 2rem 2rem;
-    background: transparent; }
-  .headerCard h4 {
-    margin: 0; } }
+@media screen and (max-width: 480px) {
+  .cardAbout {
+    width: 100%;
+    flex-flow: column wrap; }
+    .cardAbout .image-section {
+      width: 100%; }
+    .cardAbout .content-section {
+      width: 100%; } }
 
 @media screen and (max-width: 320px) {
-  .containerBox {
-    display: flex;
-    flex-flow: wrap;
-    transform: scale(0.8); }
-  .card-container {
-    display: block;
-    width: 50rem; }
-  .headerCard {
-    padding: 2rem 2rem .5rem 2rem; }
-  .descriptionCard {
-    padding: 0.5rem 2rem 2rem 2rem;
-    background: transparent; }
-  .headerCard h4 {
-    margin: 0; } }
+  .cardAbout {
+    width: 100%;
+    flex-flow: column wrap; }
+    .cardAbout .image-section {
+      width: 100%; }
+    .cardAbout .content-section {
+      width: 100%; } }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
   margin: -1rem -1rem; }
-
-.gallery-item {
-  flex: 1 0 24rem;
-  margin: 1rem;
-  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-  overflow: hidden; }
-
-.gallery-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 400ms ease-out; }
-
-.gallery-image:hover {
-  transform: scale(1.15); }
+  .gallery .gallery-item {
+    flex: 1 0 24rem;
+    margin: 1rem;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    overflow: hidden; }
+  .gallery .gallery-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out; }
+    .gallery .gallery-image:hover {
+      transform: scale(1.15); }
 
 @supports (display: grid) {
   .gallery {
