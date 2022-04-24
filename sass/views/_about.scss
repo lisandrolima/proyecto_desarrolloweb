@@ -1,103 +1,116 @@
 /* Atributos de la seccion ABOUT */
-// .sectionAbout {
-//     margin: 5rem auto;
-//     width: 100%;
-//     min-height: 100vh;
-//     border: 2px solid #8d4428;
-//     display: inline-block;
+.containerBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    padding: 0 2rem;
+}
 
-//     .content-section{
-//         float: left;
-//         width: 55%;
+.cardContainer{
+    display: flex;
+    width: 80rem;
+    height: auto;
+    font-size: $text-lg;
+    color: #000;
+    background: #C3DBD9;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 2px rgba(0,0,0, .2);
+}
+
+.headerCard{
+    border-right: 1px solid #ddd;
+}
+
+.descriptionCard{
+    background: #C3DBD9;
+}
+
+.headerCard, .descriptionCard{
+    padding: 2rem;
+    text-align: center;
+}
+
+.headerCard a{
+    position: relative;
+    display: block;
+}
+
+.headerCard img{
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0,0,0, .06);
+    margin: 2rem 3rem;
+    transition: .2s;
+}
+
+.headerCard a:hover img{
+    box-shadow: 0 0 0 12px rgba(0,0,0, .01);
+}
+
+.headerCard h2{
+    color: #000;
+}
+
+.headerCard h4{
+    margin-bottom: 2rem;
+}
+
+.descriptionCard{
+    position: relative;
+}
+
+.descriptionCard p{
+    margin: 2rem 3rem;
+}
+
+@media (max-width: 480px){
+    .containerBox{
+        display: flex;
+        flex-flow: wrap;
+        transform: scale(0.8);
+    }
+
+    .card-container{
+        display: block;
+        width: 50rem;
+    }
+
+    .headerCard{
+        padding: 2rem 2rem .5rem 2rem;
+    }
+
+    .descriptionCard{
+        padding: 0.5rem 2rem 2rem 2rem;
+        background: transparent;
+    }
+
+    .headerCard h4{
+        margin: 0;
+    }
+
+}
+@media screen and (max-width: 320px) {
+    .containerBox{
+        display: flex;
+        flex-flow: wrap;
+        transform: scale(0.8);
+    }
     
-//         .title {
-//             font-size: 3em;
-//             color: $principal;
-//         }
+    .card-container{
+        display: block;
+        width: 50rem;
+    }
 
-//         .content>h3 {
-//             margin-top: 1rem;
-//             font-size: $text-lg;
-//             color: $principal;
-//         }
-    
-//         .content>p {
-//             margin-top: 0.5rem;
-//             font-size: $text-md;
-//             line-height: 1.5;
-//             color: $principal;
-//             text-align: justify;
-//             padding-right: 1rem;
-//         }
-//     }
+    .headerCard{
+        padding: 2rem 2rem .5rem 2rem;
+    }
 
-//     .image-section {
-//         float: right;
-//         width: 40%;
-//     }
+    .descriptionCard{
+        padding: 0.5rem 2rem 2rem 2rem;
+        background: transparent;
+    }
 
-//     .image-section img{
-//         width: 80%;
-//         height: auto;
-//         box-shadow: -1rem .5rem 1rem gray;
-//     }
-// }
-
-// @media screen and (max-width: 576px){
-//     .sectionAbout {
-//         flex-direction: column;
-//         justify-content: center;
-//         min-height: auto;
-    
-//         .content-section{
-//             float: none;
-//             width: 80%;
-//             display: block;
-//             margin: auto;
-
-//             .title {
-//                 text-align: center;
-//             }
-        
-//             .content {
-//                 text-align: justify;
-//             }
-//         }
-
-//         .image-section {
-//             float: none;
-//             width: 70%;
-//             margin: auto;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 480px){
-//     .sectionAbout {
-//         flex-direction: column;
-//         justify-content: center;
-//         min-height: auto;
-    
-//         .content-section{
-//             float: none;
-//             width: 60%;
-//             display: block;
-//             margin: auto;
-        
-//             .title {
-//                 text-align: center;
-//             }
-
-//             .content {
-//                 text-align: justify;
-//             }
-//         }
-
-//         .image-section {
-//             float: none;
-//             width: 60%;
-//             display: block;
-//             margin: auto;
-//         }
-//     }
-// }
+    .headerCard h4{
+        margin: 0;
+    }
+}

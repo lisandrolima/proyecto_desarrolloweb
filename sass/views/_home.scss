@@ -1,106 +1,55 @@
-.col-container {
-    display: table;
+.containerCard{
     width: 100%;
-}
-.col {
-    display: table-cell;
-    padding: 16px;
-}
-  
-@media only screen and (max-width: 480px) {
-    .col { 
-      display: block;
-      width: 100%;
-    }
-}
-
-.containerBox{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    padding: 0 2rem;
-}
+    max-width: 110rem;
 
-.card-container{
-    display: flex;
-    width: 80rem;
-    height: auto;
-    font-size: $text-lg;
-    color: #000;
-    background: #C3DBD9;
-    border-radius: 2px;
-    box-shadow: 1px 1px 4px 2px rgba(0,0,0, .2);
-}
-
-.headerCard{
-    border-right: 1px solid #ddd;
-}
-
-.descriptionCard{
-    background: #C3DBD9;
-}
-
-.headerCard, .descriptionCard{
-    padding: 2rem;
-    text-align: center;
-}
-
-.headerCard a{
-    position: relative;
-    display: block;
-}
-
-.headerCard img{
-    border-radius: 50%;
-    box-shadow: 0 0 0 8px rgba(0,0,0, .06);
-    margin: 2rem 3rem;
-    transition: .2s;
-}
-
-.headerCard a:hover img{
-    box-shadow: 0 0 0 12px rgba(0,0,0, .01);
-}
-
-.headerCard h2{
-    color: #000;
-}
-
-.headerCard h4{
-    margin-bottom: 2rem;
-}
-
-.descriptionCard{
-    position: relative;
-}
-
-.descriptionCard p{
-    margin: 2rem 3rem;
-}
-
-@media (max-width: 480px){
-    .containerBox{
-        height: 60vh;
+    .card{
+        width: 100%;
+        margin: 2rem;
+        border-radius: .8rem;
+        overflow: hidden;
+        background: #C3DBD9;
+        box-shadow: 0px .1rem 1rem rgba(0,0,0, .4);
+        cursor: pointer;
+        transition: all 400ms ease;
+    
+        &:hover{
+            box-shadow: .5rem .5rem 2rem rgba(0,0,0, .6);;
+            transform: translateY(-3%);
+        }
+        img{
+            width: 100%;
+            height: 21rem;
+        }
+        .content{
+            padding: 1.5rem;
+            text-align: center;
+        
+            h3{
+                color: #000;
+                font-weight: 400;
+                margin-bottom: 1.5rem;
+            }
+            p{
+                color: #000;
+                line-height: 1.5;
+            }
+        }
     }
+}
 
-    .card-container{
-        display: block;
-        width: 45rem;
-        font-size: $text-md;
-        transform: scale(0.8);
+@media screen and (max-width: 480px) {
+    .containerCard{
+        display: flex;
+        flex-flow: wrap;
+        transform: scale(1);
     }
+}
 
-    .headerCard{
-        padding: 2rem 2rem .5rem 2rem;
+@media screen and (max-width: 320px) {
+    .containerCard{
+        display: flex;
+        flex-flow: wrap;
+        transform: scale(1);
     }
-
-    .descriptionCard{
-        padding: 0.5rem 2rem 2rem 2rem;
-        background: transparent;
-    }
-
-    .headerCard h4{
-        margin: 0;
-    }
-
 }
