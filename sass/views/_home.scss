@@ -80,7 +80,7 @@
         padding: 1rem 1.5rem;
         color: #000;
         text-align: center;
-        border-left: 1px solid #ddd;
+        border-left: 2px solid #ddd;
         position: relative;
         
         .title h1{
@@ -134,6 +134,7 @@
     .cardAbout{
         width: 100%;
         flex-flow: column wrap;
+        transform: scale(0.8);
 
         .image-section{
             width: 100%;
@@ -141,6 +142,7 @@
 
         .content-section{
             width: 100%;
+            border-top: 2px solid #ddd;
         }
     }
 }
@@ -148,7 +150,7 @@
     .cardAbout{
         width: 100%;
         flex-flow: column wrap;
-    
+        
         .image-section{
             width: 100%;
         }

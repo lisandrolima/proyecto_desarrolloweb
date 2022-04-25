@@ -134,7 +134,7 @@ header {
     padding: 1rem 1.5rem;
     color: #000;
     text-align: center;
-    border-left: 1px solid #ddd;
+    border-left: 2px solid #ddd;
     position: relative; }
     .cardAbout .content-section .title h1 {
       font-size: 1.6em; }
@@ -171,11 +171,13 @@ header {
 @media screen and (max-width: 640px) {
   .cardAbout {
     width: 100%;
-    flex-flow: column wrap; }
+    flex-flow: column wrap;
+    transform: scale(0.8); }
     .cardAbout .image-section {
       width: 100%; }
     .cardAbout .content-section {
-      width: 100%; } }
+      width: 100%;
+      border-top: 2px solid #ddd; } }
 
 @media screen and (max-width: 480px) {
   .cardAbout {
