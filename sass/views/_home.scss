@@ -1,37 +1,41 @@
-/* Tarjetas de Recursos */
-.containerCard{
+// Tarjetas de Recursos
+.containerCard {
     width: 100%;
     display: flex;
     max-width: 110rem;
 
-    .card{
+    .card {
         width: 100%;
         margin: 2rem;
         border-radius: .8rem;
         overflow: hidden;
-        background: #C3DBD9;
-        box-shadow: 0px .1rem 1rem rgba(0,0,0, .4);
+        background: rgb(195, 219, 217);
+        box-shadow: 0px .1rem 1rem rgba(0, 0, 0, .4);
         cursor: pointer;
         transition: all 400ms ease;
-    
-        &:hover{
-            box-shadow: .5rem .5rem 2rem rgba(0,0,0, .6);;
+
+        &:hover {
+            box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .6);
+            ;
             transform: translateY(-3%);
         }
-        img{
+
+        img {
             width: 100%;
             height: 21rem;
         }
-        .content{
+
+        .content {
             padding: 1.5rem;
             text-align: center;
-        
-            h3{
+
+            h3 {
                 color: #000;
                 font-weight: 400;
                 margin-bottom: 1.5rem;
             }
-            p{
+
+            p {
                 color: #000;
                 line-height: 1.5;
                 font-size: $text-md;
@@ -40,39 +44,39 @@
     }
 }
 
-/* Tarjeta personal */
-.cardAbout{
+// Tarjeta personal
+.cardAbout {
     width: 60rem;
     height: auto;
     display: flex;
     overflow: hidden;
-    background-color: #C3DBD9;
+    background-color: #c3dbd9;
     box-shadow: 0 .5rem 1rem gray;
     border-radius: 1rem;
-    
-    &:hover{
+
+    &:hover {
         transform: scale(1.02);
     }
 
-    .image-section{
+    .image-section {
         width: 40%;
         height: 100%;
         padding: 2rem;
-        
-        img{
+
+        img {
             width: 100%;
             height: auto;
             border-radius: 100%;
-            box-shadow: 0 0 0 8px rgba(0,0,0, .08);
+            box-shadow: 0 0 0 8px rgba(0, 0, 0, .08);
             transition: .2s;
-        
-            &:hover{
-                box-shadow: 0 0 0 12px rgba(0,0,0, .02);
+
+            &:hover {
+                box-shadow: 0 0 0 12px rgba(0, 0, 0, .02);
             }
         }
     }
 
-    .content-section{
+    .content-section {
         width: 60%;
         height: 100%;
         display: flex;
@@ -82,28 +86,99 @@
         text-align: center;
         border-left: 2px solid #ddd;
         position: relative;
-        
-        .title h1{
+
+        .title h1 {
             font-size: $text-lg;
         }
 
         .content {
-            h3{
+            h3 {
                 font-size: $text-md;
             }
-            
-            p{
+
+            p {
                 margin-top: 1rem;
                 font-size: $text-md;
                 line-height: 1.5;
             }
         }
     }
-}  
+}
 
-/* Media query Tarjetas de Recursos*/
+// Tarjetas de Opinion
+.containerOpinion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    z-index: 1;
+    
+    .cardOpinion {
+        position: relative;
+        width: 28rem;
+        height: 30rem;
+        margin: 3rem;
+        box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, .07);
+        border-radius: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        background-image: radial-gradient(#c3dbd9, white);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+        border-left: 0.1rem solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(.5rem);
+        transition: all 400ms ease;
+
+        &:hover {
+            transform: translateY(-3%);
+        }
+
+        img{
+            position: absolute;
+            width: 12rem;
+            height: 12rem;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .contentOpinion {
+            padding: 2rem;
+            text-align: center;
+            transition: 0.5s;
+
+            h2 {
+                position: absolute;
+                top: 8rem;
+                right: 10rem;
+                font-size: $text-lg;
+                font-weight: 500;
+                color: #000;
+                pointer-events: none;
+            }
+
+            h4 {
+                font-size: $text-md;
+                color: #000;
+                z-index: 1;
+            }
+
+            p {
+                font-size: 1em;
+                color: #000;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+
+// Media query Tarjetas de Recursos
 @media screen and (max-width: 640px) {
-    .containerCard{
+    .containerCard {
         display: flex;
         flex-flow: row wrap;
         transform: scale(0.8);
@@ -113,7 +188,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .containerCard{
+    .containerCard {
         display: flex;
         flex-flow: row wrap;
         transform: scale(1);
@@ -121,7 +196,7 @@
 }
 
 @media screen and (max-width: 320px) {
-    .containerCard{
+    .containerCard {
         display: flex;
         flex-flow: row wrap;
         transform: scale(1);
@@ -129,47 +204,49 @@
     }
 }
 
-/* Media query Tarjeta personal */
+// Media query Tarjeta personal
 @media screen and (max-width: 640px) {
-    .cardAbout{
+    .cardAbout {
         width: 100%;
         flex-flow: column wrap;
         transform: scale(0.8);
 
-        .image-section{
+        .image-section {
             width: 100%;
         }
 
-        .content-section{
+        .content-section {
             width: 100%;
             border-top: 2px solid #ddd;
         }
     }
 }
+
 @media screen and (max-width: 480px) {
-    .cardAbout{
+    .cardAbout {
         width: 100%;
         flex-flow: column wrap;
-        
-        .image-section{
+
+        .image-section {
             width: 100%;
         }
 
-        .content-section{
+        .content-section {
             width: 100%;
         }
     }
 }
+
 @media screen and (max-width: 320px) {
-    .cardAbout{
+    .cardAbout {
         width: 100%;
         flex-flow: column wrap;
-    
-        .image-section{
+
+        .image-section {
             width: 100%;
         }
 
-        .content-section{
+        .content-section {
             width: 100%;
         }
     }

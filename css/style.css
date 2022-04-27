@@ -71,7 +71,6 @@ header {
         header .navbar-nav .nav-item:hover {
           background-color: #ffffff99; }
 
-/* Tarjetas de Recursos */
 .containerCard {
   width: 100%;
   display: flex;
@@ -81,7 +80,7 @@ header {
     margin: 2rem;
     border-radius: .8rem;
     overflow: hidden;
-    background: #C3DBD9;
+    background: #c3dbd9;
     box-shadow: 0px 0.1rem 1rem rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: all 400ms ease; }
@@ -103,13 +102,12 @@ header {
         line-height: 1.5;
         font-size: 1.3em; }
 
-/* Tarjeta personal */
 .cardAbout {
   width: 60rem;
   height: auto;
   display: flex;
   overflow: hidden;
-  background-color: #C3DBD9;
+  background-color: #c3dbd9;
   box-shadow: 0 .5rem 1rem gray;
   border-radius: 1rem; }
   .cardAbout:hover {
@@ -145,7 +143,60 @@ header {
       font-size: 1.3em;
       line-height: 1.5; }
 
-/* Media query Tarjetas de Recursos*/
+.containerOpinion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+  z-index: 1; }
+  .containerOpinion .cardOpinion {
+    position: relative;
+    width: 28rem;
+    height: 30rem;
+    margin: 3rem;
+    box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.07);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    background-image: radial-gradient(#c3dbd9, white);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.5rem);
+    transition: all 400ms ease; }
+    .containerOpinion .cardOpinion:hover {
+      transform: translateY(-3%); }
+    .containerOpinion .cardOpinion img {
+      position: absolute;
+      width: 12rem;
+      height: 12rem;
+      top: 1rem;
+      left: 1rem; }
+    .containerOpinion .cardOpinion .contentOpinion {
+      padding: 2rem;
+      text-align: center;
+      transition: 0.5s; }
+      .containerOpinion .cardOpinion .contentOpinion h2 {
+        position: absolute;
+        top: 8rem;
+        right: 10rem;
+        font-size: 1.6em;
+        font-weight: 500;
+        color: #000;
+        pointer-events: none; }
+      .containerOpinion .cardOpinion .contentOpinion h4 {
+        font-size: 1.3em;
+        color: #000;
+        z-index: 1; }
+      .containerOpinion .cardOpinion .contentOpinion p {
+        font-size: 1em;
+        color: #000;
+        font-weight: 500;
+        line-height: 1.5; }
+
 @media screen and (max-width: 640px) {
   .containerCard {
     display: flex;
@@ -167,7 +218,6 @@ header {
     transform: scale(1);
     transition: 0.1s; } }
 
-/* Media query Tarjeta personal */
 @media screen and (max-width: 640px) {
   .cardAbout {
     width: 100%;
@@ -336,12 +386,36 @@ header {
   .gallery-item {
     margin: 0; } }
 
-.service {
-  margin: 5rem auto;
+.containerCard {
   width: 100%;
-  min-height: 100vh; }
-  .service .card {
-    padding: 1rem; }
+  display: flex;
+  max-width: 110rem; }
+  .containerCard .card {
+    width: 100%;
+    margin: 2rem;
+    border-radius: .8rem;
+    overflow: hidden;
+    background: #c3dbd9;
+    box-shadow: 0px 0.1rem 1rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 400ms ease; }
+    .containerCard .card:hover {
+      box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.6);
+      transform: translateY(-3%); }
+    .containerCard .card img {
+      width: 100%;
+      height: 21rem; }
+    .containerCard .card .content {
+      padding: 1.5rem;
+      text-align: center; }
+      .containerCard .card .content h3 {
+        color: #000;
+        font-weight: 400;
+        margin-bottom: 1.5rem; }
+      .containerCard .card .content p {
+        color: #000;
+        line-height: 1.5;
+        font-size: 1.3em; }
 
 /* Atributos de la seccion CONTACT */
 .contactForm {
