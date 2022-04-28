@@ -1,0 +1,115 @@
+.cardShop {
+    width: 60rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    //background-color: #c3dbd9;
+    box-shadow: 0 .5rem 1rem gray;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    background-image: radial-gradient(#c3dbd9, white);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(.5rem);
+    transition: all 400ms ease;
+
+    &:hover {
+        //transform: scale(1.02);
+        transform: translateY(-3%);
+    }
+
+    .imageShop {
+        width: 40%;
+        height: 100%;
+        padding: 2rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 8px rgba(0, 0, 0, .08);
+            transition: .2s;
+
+            &:hover {
+                box-shadow: 0 0 0 12px rgba(0, 0, 0, .02);
+            }
+        }
+    }
+
+    .contentShop-section {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        color: #000;
+        text-align: center;
+        border-left: 2px solid #ddd;
+        position: relative;
+
+        .title h1 {
+            font-size: $text-lg;
+        }
+
+        .contentShop {
+            h3 {
+                font-size: $text-md;
+            }
+
+            p {
+                margin-top: 1rem;
+                font-size: $text-md;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cardShop {
+        width: 100%;
+        flex-flow: column wrap;
+        transform: scale(0.8);
+
+        .imageShop {
+            width: 100%;
+        }
+
+        .contentShop-section {
+            width: 100%;
+            border-top: 2px solid #ddd;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardAbout {
+        width: 100%;
+        flex-flow: column wrap;
+
+        .imageShop {
+            width: 100%;
+        }
+
+        .contentShop-section {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cardShop {
+        width: 100%;
+        flex-flow: column wrap;
+
+        .imageShop {
+            width: 100%;
+        }
+
+        .contentShop-section {
+            width: 100%;
+        }
+    }
+}

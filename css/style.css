@@ -180,19 +180,18 @@ header {
       text-align: center;
       transition: 0.5s; }
       .containerOpinion .cardOpinion .contentOpinion h2 {
-        position: absolute;
-        top: 8rem;
-        right: 10rem;
-        font-size: 1.6em;
+        position: relative;
+        text-align: center;
+        font-size: 3em;
         font-weight: 500;
         color: #000;
         pointer-events: none; }
       .containerOpinion .cardOpinion .contentOpinion h4 {
-        font-size: 1.3em;
+        font-size: 2em;
         color: #000;
         z-index: 1; }
       .containerOpinion .cardOpinion .contentOpinion p {
-        font-size: 1em;
+        font-size: 1.5em;
         color: #000;
         font-weight: 500;
         line-height: 1.5; }
@@ -416,6 +415,83 @@ header {
         color: #000;
         line-height: 1.5;
         font-size: 1.3em; }
+
+.cardShop {
+  width: 60rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem gray;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  background-image: radial-gradient(#c3dbd9, white);
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(0.5rem);
+  transition: all 400ms ease; }
+  .cardShop:hover {
+    transform: translateY(-3%); }
+  .cardShop .imageShop {
+    width: 40%;
+    height: 100%;
+    padding: 2rem; }
+    .cardShop .imageShop img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.08);
+      transition: .2s; }
+      .cardShop .imageShop img:hover {
+        box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.02); }
+  .cardShop .contentShop-section {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    color: #000;
+    text-align: center;
+    border-left: 2px solid #ddd;
+    position: relative; }
+    .cardShop .contentShop-section .title h1 {
+      font-size: 1.6em; }
+    .cardShop .contentShop-section .contentShop h3 {
+      font-size: 1.3em; }
+    .cardShop .contentShop-section .contentShop p {
+      margin-top: 1rem;
+      font-size: 1.3em;
+      line-height: 1.5; }
+
+@media screen and (max-width: 640px) {
+  .cardShop {
+    width: 100%;
+    flex-flow: column wrap;
+    transform: scale(0.8); }
+    .cardShop .imageShop {
+      width: 100%; }
+    .cardShop .contentShop-section {
+      width: 100%;
+      border-top: 2px solid #ddd; } }
+
+@media screen and (max-width: 480px) {
+  .cardAbout {
+    width: 100%;
+    flex-flow: column wrap; }
+    .cardAbout .imageShop {
+      width: 100%; }
+    .cardAbout .contentShop-section {
+      width: 100%; } }
+
+@media screen and (max-width: 320px) {
+  .cardShop {
+    width: 100%;
+    flex-flow: column wrap; }
+    .cardShop .imageShop {
+      width: 100%; }
+    .cardShop .contentShop-section {
+      width: 100%; } }
 
 /* Atributos de la seccion CONTACT */
 .contactForm {
