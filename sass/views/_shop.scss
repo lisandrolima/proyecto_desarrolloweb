@@ -84,12 +84,11 @@
 
 @media screen and (max-width: 640px) {
     .cardShop {
-        width: 100%;
+        width: 90%;
         flex-flow: column wrap;
-        transform: scale(0.8);
-
+        
         .imageShop {
-            width: 100%;
+            width: 90%;
             border-bottom: 2px solid #ddd;
             border-right: none;
         }
@@ -101,12 +100,12 @@
 }
 
 @media screen and (max-width: 480px) {
-    .cardAbout {
-        width: 100%;
+    .cardShop {
+        width: 90%;
         flex-flow: column wrap;
 
         .imageShop {
-            width: 100%;
+            width: 90%;
         }
 
         .contentShop-section {
@@ -117,11 +116,11 @@
 
 @media screen and (max-width: 320px) {
     .cardShop {
-        width: 100%;
+        width: 90%;
         flex-flow: column wrap;
 
         .imageShop {
-            width: 100%;
+            width: 90%;
         }
 
         .contentShop-section {

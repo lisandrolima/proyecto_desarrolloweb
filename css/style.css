@@ -482,31 +482,30 @@ header {
 
 @media screen and (max-width: 640px) {
   .cardShop {
-    width: 100%;
-    flex-flow: column wrap;
-    transform: scale(0.8); }
+    width: 90%;
+    flex-flow: column wrap; }
     .cardShop .imageShop {
-      width: 100%;
+      width: 90%;
       border-bottom: 2px solid #ddd;
       border-right: none; }
     .cardShop .contentShop-section {
       width: 100%; } }
 
 @media screen and (max-width: 480px) {
-  .cardAbout {
-    width: 100%;
+  .cardShop {
+    width: 90%;
     flex-flow: column wrap; }
-    .cardAbout .imageShop {
-      width: 100%; }
-    .cardAbout .contentShop-section {
+    .cardShop .imageShop {
+      width: 90%; }
+    .cardShop .contentShop-section {
       width: 100%; } }
 
 @media screen and (max-width: 320px) {
   .cardShop {
-    width: 100%;
+    width: 90%;
     flex-flow: column wrap; }
     .cardShop .imageShop {
-      width: 100%; }
+      width: 90%; }
     .cardShop .contentShop-section {
       width: 100%; } }
 
