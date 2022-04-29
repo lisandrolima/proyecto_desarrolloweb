@@ -19,7 +19,7 @@ footer {
     }
 
     .socialMedia {
-        @include flex(row, flex-end, center, 1rem, wrap);
+        @include flex(row, center, center, 1rem, wrap);
 
         &__link {
             width: 4em;

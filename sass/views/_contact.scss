@@ -7,8 +7,7 @@
     border: 3px solid black;
     border-style: double;
     border-radius: 2rem;
-    box-shadow: -1rem .5rem 1rem gray;
-
+    box-shadow: -1rem .3rem 1rem #cecdcd;
 
     form input{
         outline: none;
@@ -29,12 +28,18 @@
 
 @media screen and (max-width: 576px){
     .contactForm {
-        transform: scale(0.8);
+        width: 90%;
     }    
 }
 
 @media screen and (max-width: 480px){
     .contactForm {
-        transform: scale(0.8);
+        width: 90%;
+    }    
+}
+
+@media screen and (max-width: 320px){
+    .contactForm {
+        width: 90%;
     }    
 }

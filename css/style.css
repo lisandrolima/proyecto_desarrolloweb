@@ -198,30 +198,28 @@ header {
 
 @media screen and (max-width: 640px) {
   .containerCard {
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
-    transform: scale(0.8);
     margin: 0;
     padding: 0; } }
 
 @media screen and (max-width: 480px) {
   .containerCard {
+    width: 90%;
     display: flex;
-    flex-flow: row wrap;
-    transform: scale(1); } }
+    flex-flow: row wrap; } }
 
 @media screen and (max-width: 320px) {
   .containerCard {
+    width: 90%;
     display: flex;
-    flex-flow: row wrap;
-    transform: scale(1);
-    transition: 0.1s; } }
+    flex-flow: row wrap; } }
 
 @media screen and (max-width: 640px) {
   .cardAbout {
-    width: 100%;
-    flex-flow: column wrap;
-    transform: scale(0.8); }
+    width: 90%;
+    flex-flow: column wrap; }
     .cardAbout .image-section {
       width: 100%; }
     .cardAbout .content-section {
@@ -231,7 +229,7 @@ header {
 
 @media screen and (max-width: 480px) {
   .cardAbout {
-    width: 100%;
+    width: 90%;
     flex-flow: column wrap; }
     .cardAbout .image-section {
       width: 100%; }
@@ -240,7 +238,7 @@ header {
 
 @media screen and (max-width: 320px) {
   .cardAbout {
-    width: 100%;
+    width: 90%;
     flex-flow: column wrap; }
     .cardAbout .image-section {
       width: 100%; }
@@ -518,7 +516,7 @@ header {
   border: 3px solid black;
   border-style: double;
   border-radius: 2rem;
-  box-shadow: -1rem .5rem 1rem gray; }
+  box-shadow: -1rem .3rem 1rem #cecdcd; }
   .contactForm form input {
     outline: none; }
   .contactForm form textarea {
@@ -532,11 +530,15 @@ header {
 
 @media screen and (max-width: 576px) {
   .contactForm {
-    transform: scale(0.8); } }
+    width: 90%; } }
 
 @media screen and (max-width: 480px) {
   .contactForm {
-    transform: scale(0.8); } }
+    width: 90%; } }
+
+@media screen and (max-width: 320px) {
+  .contactForm {
+    width: 90%; } }
 
 /* Atributos sobre el footer */
 footer {
@@ -555,7 +557,7 @@ footer {
   footer .socialMedia {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap; }
